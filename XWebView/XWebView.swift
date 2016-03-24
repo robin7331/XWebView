@@ -113,9 +113,9 @@ extension WKWebView {
 extension WKWebView {
     // Overlay support for loading file URL
     public func loadFileURL(URL: NSURL, overlayURLs: [NSURL]? = nil) -> WKNavigation? {
-        guard overlayURLs?.count > 0 else {
-            return loadFileURL(URL, allowingReadAccessToURL: URL.baseURL!)
-        }
+//        guard overlayURLs?.count > 0 else {
+//            return loadFileURL(URL, allowingReadAccessToURL: URL.baseURL!)
+//        }
 
         guard URL.fileURL && URL.baseURL != nil else {
             assertionFailure("URL must be a relative file URL.")
